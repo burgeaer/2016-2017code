@@ -1,0 +1,193 @@
+/*
+ * name:        base.css
+ * project:     jQuery & jQueryUI Visual Quickstart Guide
+ * author:      Jay Blanchard
+ */
+ 
+ /* basic setup */
+ html, body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+ 
+ #registration {
+    position: absolute;
+    left: 10px;
+    top: -40px;
+    background-color: #0066CC;
+    padding: 10px 10px 15px 10px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;   
+ }
+ 
+ #registration a {
+    position: relative;
+    top: 12px;
+    left: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ #registration a:hover, #navigation a:hover {
+    color: #CCCCCC;
+ }    
+ 
+ #navigation {
+    position: absolute;
+    left: 275px;
+    top: -40px;
+    height: 45px;
+    background-color: #003366;
+    padding: 10px 10px 15px 10px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
+ }
+ 
+ #navigation a {
+    position: relative;
+    padding: 0px 12px 0px 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ #drawer_title {
+    position: relative;
+    color: #FFFFFF;
+    top: 14px;
+    left: 5px;
+ }
+ 
+ #content {
+    position: absolute;
+    top: 75px;
+    padding: 10px;
+ }
+ .small_text {
+    font-size: .7em;
+ }
+ 
+ .imageGallery {
+    list-style: none outside none;
+ }
+ 
+ .imageGallery li {
+    float: left;
+    padding: 10px;
+ }
+ 
+ .imageBoxShadow {
+    padding: 7px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 3px 3px 5px 6px #999999;
+    -moz-box-shadow: 3px 3px 5px 6px #999999;
+    -webkit-box-shadow: 3px 3px 5px 6px #999999;
+ }
+ .blueBoxShadow {
+    color: #FFFFFF;
+    background-color: #003366;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }
+    
+ .lightBlueBox {
+    padding: 10px 10px 15px 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }
+ .textHighlight {
+    background: #FFFF00;
+ }
+  .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 100;
+    display: none;
+ }
+ .photoModal {
+    position: fixed;
+    float: left;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    background: #FFFFFF;
+    color: #000000;
+    text-align: right;
+    border: 10px solid #FFFFFF;
+    padding: 7px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 200;
+    display: none;
+}
+.closePhoto {
+    text-decoration: none;
+    font-weight: bold;
+    color: #999999;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.article {
+    border: 1px solid #333333;
+    width: 75%;
+    padding: 5px;
+    margin: 5px;
+}
+.pageWrapper { 
+    width: 99%; 
+    margin: 5px auto;
+}
+
+.sidebar { 
+    width: 175px;
+    margin-top: 5px;
+    margin-left: 80%;
+    color: #FFFFFF;
+    background-color: #003366;
+    padding: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px; 
+}
+.sidebar a {
+    position: relative;
+    left: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ .sidebar a:hover {
+    color: #CCCCCC;
+ }
+ .author, .postDate {
+    border-bottom: 1px dashed #669999;
+ }
+ .articleTags span {
+    font-size: 0.9em;
+    color: #FFFFFF;
+    padding: 1px 3px 1px 3px;
+    background-color: #0066CC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;   
+ }
+ #product_table th, td {
+    padding-left: 5px;
+    padding-right: 5px;
+ }
+  #product_table td {
+    text-align: right;
+ }
+ #product_table td:first-child {
+    text-align: left;
+ }            

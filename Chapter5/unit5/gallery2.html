@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- BASIC INFORMATION -->
+	<meta charset="utf-8">
+	<title>jQuery - Traversing the DOM</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+    <!-- CSS -->
+	<link rel="stylesheet" href="css/base.css">
+	
+    <!-- JAVASCRIPT / JQUERY -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="inc/jquery/jquery-1.7.2.js"></script>
+    <script src="inc/jquery/jquery.custom.js"></script>
+    
+</head>
+<body>
+    <!-- CONTENT -->
+    <div id="registration">
+        <form action="inc/php/registration.php" method="post">
+            <input type="text" name="userEMail" placeholder="your e-mail address" />
+            <button type="submit">Subscribe</button>
+        </form>
+        <a href="">Click Here to Subscribe</a>
+    </div>
+    <div id="navigation">
+        <a href="content_index.html">Home</a>
+        <a href="content_product.html">Products</a>
+        <a href="content_services.html">Services</a>
+        <a href="content_about.html">About Us</a><br />
+        <span id="drawer_title">Site Navigation</span>
+    </div>
+    <div id="content">
+        <ul class="imageGallery">
+            <li><img src="images/thumb_lv01.jpg" data-photo="images/lv01.jpg" alt="Classic Sign - Las Vegas" /></li>
+            <li><img src="images/thumb_lv02.jpg" data-photo="images/lv02.jpg" alt="New York New York - Las Vegas" /></li>
+            <li><img src="images/thumb_lv03.jpg" data-photo="images/lv03.jpg" alt="Neon Lights - Las Vegas" /></li>
+            <li><img src="images/thumb_lv04.jpg" data-photo="images/lv04.jpg" alt="Stratosphere -  Las Vegas" /></li>
+            <li><img src="images/thumb_lv05.jpg" data-photo="images/lv05.jpg" alt="Wynn Hotel - Las Vegas" /></li>
+            <li><img src="images/thumb_lv06.jpg" data-photo="images/lv06.jpg" alt="Paris - Las Vegas" /></li>
+        </ul>
+    </div>
+</body>
+</html>
