@@ -1,0 +1,104 @@
+/*
+ * name:        base.css
+ * project:     jQuery & jQueryUI Visual Quickstart Guide
+ * author:      Jay Blanchard
+ */
+ 
+ /* basic setup */
+ html, body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+ 
+ #registration {
+    position: absolute;
+    left: 10px;
+    top: -40px;
+    background-color: #0066CC;
+    padding: 10px 10px 15px 10px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;   
+ }
+ 
+ #registration a {
+    position: relative;
+    top: 12px;
+    left: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ #registration a:hover, #navigation a:hover {
+    color: #CCCCCC;
+ }    
+ 
+ #navigation {
+    position: absolute;
+    left: 275px;
+    top: -40px;
+    height: 45px;
+    background-color: #003366;
+    padding: 10px 10px 15px 10px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
+ }
+ 
+ #navigation a {
+    position: relative;
+    padding: 0px 12px 0px 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ #drawer_title {
+    position: relative;
+    color: #FFFFFF;
+    top: 14px;
+    left: 5px;
+ }
+ 
+ #content {
+    position: absolute;
+    top: 75px;
+    padding: 10px;
+ }
+ .small_text {
+    font-size: .7em;
+ }
+ 
+ .imageGallery {
+    list-style: none outside none;
+ }
+ 
+ .imageGallery li {
+    float: left;
+    padding: 10px;
+ }
+ .imageBoxShadow {
+    padding: 7px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 3px 3px 5px 6px #999999;
+    -moz-box-shadow: 3px 3px 5px 6px #999999;
+    -webkit-box-shadow: 3px 3px 5px 6px #999999;
+ }
+ .blueBoxShadow {
+    color: #FFFFFF;
+    background-color: #003366;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }   
+ .lightBlueBox {
+    padding: 10px 10px 15px 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }
+ .textHighlight {
+    background: #FFFF00;
+ }  

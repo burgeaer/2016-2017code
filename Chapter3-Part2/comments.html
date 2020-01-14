@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- BASIC INFORMATION -->
+	<meta charset="utf-8">
+	<title>Graphics Programming with Dynamic Elements - Assignment 3</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+    <!-- CSS -->
+	<link rel="stylesheet" href="css/base.css">
+	
+    <!-- JAVASCRIPT / JQUERY -->
+    <script src="inc/jquery/jquery-1.7.2.js"></script>
+    <script src="inc/jquery/jquery.custom.js"></script>
+    
+</head>
+<body>
+    <!-- CONTENT -->
+    <div id="registration">
+        <form action="inc/php/registration.php" method="post">
+            <input type="text" name="userEMail" placeholder="your e-mail address" />
+            <button type="submit">Subscribe</button>
+        </form>
+        <a href="">Click Here to Subscribe</a>
+    </div>
+    <div id="navigation">
+        <a href="content_index.html">Home</a>
+        <a href="content_product.html">Products</a>
+        <a href="content_services.html">Services</a>
+        <a href="content_about.html">About Us</a><br />
+        <span id="drawer_title">Site Navigation</span>
+    </div>
+    <div id="content">
+        <p>Send us your comments, we'd love to hear from you!</p>
+        <p class="textInfo">You have typed <span>0</span> characters.</p>
+        <form name="contact" action="inc/php/contact.php" method="post">
+            <input type="text" name="contactName" placeholder="your name"/><span></span><br />
+            <input type="text" name="contactEMail" placeholder= "your e-mail address"/><span></span><br />
+            <!-- hidden password -->
+            <input type="text" name="contactPassword" placeholder="password not required" DISABLED/><span></span><br />
+                                                                <!--Password not required-->
+            <a href="" class="small_text" id="showPassword">Hide Password</a><br />
+
+            <textarea name="contactComments" placeholder="your comments"></textarea><span></span><br />
+            <select name="subscriberStatus">
+                <option></option>
+                <option value="non-subscriber">non-subscriber</option>
+                <option value="subscriber">subscriber</option>
+            </select><span></span><br />
+            <button type="submit" name="submit">Send your comments</button>
+        </form>
+    </div>
+</body>
+</html>
