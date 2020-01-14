@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperatures</title>
+
+    <meta charset="UTF-8">
+    <script>
+
+      function showTemps() {
+          var tempByDay = new Array();
+          tempByDay[0] =  59.2;
+          tempByDay[1] =  60.1;
+          tempByDay[2] = 63;
+          tempByDay[3] =  65;
+          tempByDay[4] =  62;
+
+          for (var i = 0; i < tempByDay.length; i++) {
+              var theTemp = tempByDay[i];
+              var id = "temp" + i;
+              var li = document.getElementById(id);
+
+              if (i == 0) {
+                  li.innerHTML = "The temperature on Day " + i + " " + theTemp;
+              }
+              else {
+                  li.innerHTML = "The temperature on Day " + i + " was " + theTemp;
+              }
+          }
+      }
+        window.onload = showTemps;
+
+    </script>
+</head>
+<body>
+<h1>Temperatures</h1>
+<ul>
+    <li id="temp0"></li>
+    <li id="temp1"></li>
+    <li id="temp2"></li>
+    <li id="temp3"></li>
+    <li id="temp4"></li>
+</ul>
+</body>
+</html>

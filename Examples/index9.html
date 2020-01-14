@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/canvas2.js"></script>
+
+    <style>
+        canvas {
+            border: 1px solid #0072C6;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="300"></canvas>
+
+<div>
+Enter a String: <input id="inputText">
+Choose a Font: <select id="font-type">
+    <option value="Verdana">Verdana</option>
+    <option value="Calibri">Calibri</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier">Courier</option>
+
+</select>
+
+    <br>
+    <br>
+
+    Font Size: <input id="font-size" type="range" min="10" max="50"><span id="size-text"></span>
+</div>
+
+<button id="btn">Draw it!</button>
+</body>
+</html>

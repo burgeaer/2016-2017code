@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebVille Cinema</title>
+</head>
+<body>
+<script>
+
+    function Movie(title, genre, rating, showtimes) {
+        this.title = title;
+        this.genre = genre;
+        this.rating = rating;
+        this.showtimes = showtimes;
+
+        this.getNextShowing = function () {
+            var now = new Date().getTime();
+            for (var i = 0; i < this.showtimes.length; i++) {
+                var showtime = getTimeFromString(this.showtimes[i]);
+                if ((showtime - now) > 0) {
+                    return "Next Showing of " + this.title + this.genre + " is " + this.showtimes[i] + " Rating: " + this.rating;
+                }
+            }
+
+        }
+    }
+    var banzaiMovie = new Movie("Buckaroo Banzai",
+    "Cult Classic", "G", ["1:00pm", "5:00pm", "7:00pm", "11:00pm"]);
+    var plan9Movie = new Movie("Buckaroo Banzai",
+        "Cult Classic", "PG-13", ["3:00pm", "7:00pm", "11:00pm"]);
+    var forbiddenPlanet = new Movie("Buckaroo Banzai",
+        "Cult Classic", "R", ["5:00pm", "9:00pm"]);
+    var nextShowing = banzaiMovie.getNextShowing();
+    alert(nextShowing);
+    nextShowing = plan9Movie.getNextShowing();
+    alert(nextShowing);
+    nextShowing = forbiddenPlanet.getNextShowing();
+    alert(nextShowing);
+
+    //alert(banzaiMovie.getNextShowing());
+   // alert(plan9Movie.getNextShowing());
+  //  alert(forbiddenPlanet.getNextShowing());
+   // alert(banzaiMovie.getRating());
+  //  alert(plan9Movie.getRating());
+  //  alert(forbiddenPlanet.getRating());
+    </script>
+</body>
+</html>

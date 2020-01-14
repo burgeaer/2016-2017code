@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webville</title>
+
+</head>
+<body>
+<script>
+    var banzaiMovie = {
+       title: "Buckaroo Banzai",
+       genre: "Cult classic",
+        rating: 5,
+        showtimes: ["1:00pm", "5:00pm", "7:00pm"]
+    };
+
+    var movie1 = {
+        title: "Plan 9 from Outer Space",
+        genre: "Cult Classic",
+        rating: "PG",
+        showtimes: ["3:00pm", "7:00pm", "11:00pm"],
+
+        getNextShowing: function () {
+            var now = new Date().getTime();
+            for (var i = 0; i < this.showtimes.length; i++) {
+                var showtime = getTimeFromString(this.showtimes[i]);
+                if ((showtime - now) > 0) {
+                    return "Next Showing of " + this.title + " is " + this.showtimes[i] + " Rating: " + this.rating;
+                }
+            }
+            return null;
+        },
+        getRating: function () {
+            if (this.rating === "G") {
+                return this.title +": All Ages Are Welcome for this Movie"
+            }
+            else if (this.rating === "PG") {
+                return this.title +": Some Material Might not be suited for Children; All Ages Are Welcome"
+            }
+            else if (this.rating === "PG-13") {
+                return this.title +": Some Material may be inappropriate; You must be 13 or older to watch this movie"
+            }
+            else if (this.rating === "R") {
+                return this.title +": Under 17 requires an accompanying parent or adult guardian"
+            }
+            else
+                return this.title +": No one 17 or Under Admitted"
+        }
+
+    };
+    var movie2 = {
+        title: "Forbidden Planet",
+        genre: "Cult Classic",
+        rating: "PG-13",
+        showtimes: ["5:00pm", "9:00pm"],
+
+        getNextShowing: function () {
+            var now = new Date().getTime();
+            for (var i = 0; i < this.showtimes.length; i++) {
+                var showtime = getTimeFromString(this.showtimes[i]);
+                if ((showtime - now) > 0) {
+                    return "Next Showing of " + this.title + " is " + this.showtimes[i] + " Rating: " + this.rating;
+                }
+            }
+            return null;
+        },
+        getRating: function () {
+            if (this.rating === "G") {
+                return this.title + ": All Ages Are Welcome for this Movie"
+            }
+            else if (this.rating === "PG") {
+                return this.title +": Some Material Might not be suited for Children; All Ages Are Welcome"
+            }
+            else if (this.rating === "PG-13") {
+                return this.title +": Some Material may be inappropriate; You must be 13 or older to watch this movie"
+            }
+            else if (this.rating === "R") {
+                return this.title +": Under 17 requires an accompanying parent or adult guardian"
+            }
+            else
+                return this.title +": No one 17 or Under Admitted"
+        }
+
+    };
+
+    function getTimeFromString(timeString) {
+        var theTime = new Date();
+        var time = timeString.match(/(\d+)(?::(\d\d))?\s*(p?)/);
+        theTime.setHours(parseInt(time[1]) + (time[3] ? 12 : 0));
+        theTime.setMinutes(parseInt(time[2]) || 0);
+        return theTime.getTime();
+
+    }
+
+    var nextShowing = movie1.getNextShowing();
+    alert(nextShowing);
+    nextShowing = movie2.getNextShowing();
+    alert(nextShowing);
+    var nextShowing = movie1.getRating();
+    alert(nextShowing);
+    var nextShowing = movie2.getRating();
+    alert(nextShowing);
+    //var nextShowing = getNextShowing(banzaiMovie);
+    //alert(nextShowing)
+
+
+
+</script>
+</body>
+</html>
