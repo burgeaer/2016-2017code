@@ -1,9 +1,5 @@
 # maincode
 
-Hi Im Aeryn
+Doing things yourself is way better then copying and pasting code. These are answers but they are meant for learning purposes.
 
-Nice to Meet You, I am Currently Working on GitHub and Trying to provide my past code for use for future students going into the IT Field. 
-
-I am also looking foreward to learning about Git, and Github to help me become a better developer.
-
-I love to learn so don't hesistate to tell me if i have made mistake or need to work on things more. 
+These class projects come from the Java Programming 2 Class: Java Programming and Data Stuctures Y. Daniel Liang 11th Edition
