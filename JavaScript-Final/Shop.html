@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+<h1>Timeless Games</h1>
+<nav>
+    <a id = nav1 href="Home.html">Home</a>
+    <a id = nav2 href="GameCalculator.html">Games Avaliable</a>
+    <a id = nav3 href="Contact.html">Contact Inforamtion</a>
+    <a id = nav4 href="Shop.html">Shop</a>
+</nav>
+<article>
+
+    <h2>Shop</h2>
+
+    <p>The Shop is still currently in testing mode. Help us out by using the Login Form below.</p>
+
+    <div id="errorMessage"></div>
+    <form id="login" action="Login.html" >
+        <fieldset id="deliveryinfo">
+            <label for="usernameinput">Username</label>
+            <input type="text" id="usernameinput" name="username" required/>
+            <label for="passwordinput">Password</label>
+            <input type="password" id="passwordinput" name="password" required/>
+            <input type="checkbox" id="rememberinput" name="remember" value="remember" />
+            <label for="rememberinput" id="rememberlabel">Remember me</label>
+        </fieldset>
+        <fieldset id="submitbutton">
+            <input type="submit" id="submitBtn" value="Login" />
+        </fieldset>
+    </form>
+</article>
+<script src="script2.js"></script>
+</body>
+</html>

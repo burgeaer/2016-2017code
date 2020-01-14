@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games Avaliable</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+
+</head>
+<body>
+    <h1>Timeless Games</h1>
+    <nav>
+        <a id = nav1 href="Home.html">Home</a>
+        <a id = nav2 href="GameCalculator.html">Games Avaliable</a>
+        <a id = nav3 href="Contact.html">Contact Inforamtion</a>
+        <a id = nav4 href="Shop.html">Shop</a>
+    </nav>
+<article>
+
+    <p>*Hint click on the title of the game to see the picture</p>
+
+    <div id="container">
+        <h3>Spyro Enter the Dragonfly</h3>
+        <img src="Images/spryo.jpg" alt="spyro"/>
+        <p class="desc">The way of the Dragon. Strength. Displine. Bubble Breath? Dragonflies Missing?! Future of the dragon realms in jeopardy?! It seems Ripto is back with an evil plan and everyone's favorite dragon is on a mission to stop him. Featuring tricky puzzles, dazzling levels, and all new breath weapons, this is definitely Spyro's hottest adventure ever!</p>
+
+        <p class="desc">Price: $10.99. Condition: Used, Disk and Case Only</p>
+
+        <h3>Super Mario Sunshine : </h3>
+        <img src="Images/mariosunshine.jpg" alt="mariosunshine"/>
+        <p class="desc">When Mario arrives on tropical Isle Delfino, the once-pristine island is polluted and plastered with graffiti. Even worse, he's being blamed for the mess! Now instead of enjoying a relaxing vacation, Mario has to clean up the place and track down the real culprit</p>
+
+        <p class="desc">Price: $15.99. Condition: Used, Disk and Case Only</p>
+
+        <h3>Wario Ware INC: Mega Party Game$ : </h3>
+        <img src="Images/warioware.jpg" alt="warioware"/>
+        <p class="desc">Wario: HEY! BUY MY GAME! Turns out, you people are so crazy for The Wario that you want more more more! so I give you WarioWare, INC.: Mega Party Games$-Tons of microgames crammed into the most insane multiplayer party games ever! so grab your friends and have a blast, Wario-Style!</p>
+
+        <p class="desc">Price $16.99. Condition Used, Disk and Case Only</p>
+
+        <h3>Kirby: Air Ride : </h3>
+        <img src="Images/kirbyairride.jpg" alt="kirbyairride"/>
+        <p class="desc">Prepare for fast and furious racing action as Kirby hits Warpstar speed! Use ultra-simple controls to race and battle your pals in one of three hectic game modes!</p>
+
+        <p class="desc">Price $19.99. Condition Used, Disk, Safety Instuctions, and Case Included</p>
+
+        <h3>The Legend of Zelda: The Wind Waker :</h3>
+        <img src="Images/windwaker.jpg" alt="windwaker"/>
+        <p class="desc">Legend has it that whenever evil has appeared, a hero named Link has risen to defeat it. That legend continues on the surface of a great and mysterious sea as Link sets off on his most epic and awe-inspiring adventure yet. Aided by a magical conductor's baton called the Wind Waker, he will face unimaginable monsters, explore puzzling dungeons, and meet a cast of unforgettable characters as he searches for his kidnapped sister.</p>
+
+        <p class="desc">Price $20.99. Condition Used, Disk and Case Only</p>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.js"></script>
+    </div>
+
+    <div id="2">
+<h2 id="calc">Want an Estimate? Use the Calculator</h2>
+    <form id="calculator">
+        <input type="checkbox" id="item1" value="1599" />
+        <label for="item1">Spyro Enter The Dragonfly  ($10.99)</label>
+        <input type="checkbox" id="item2" value="1099" />
+        <label for="item2">Super Mario Sunshine  ($15.99)</label>
+        <input type="checkbox" id="item3" value="1699" />
+        <label for="item3">WarioWare INC  ($16.99)</label>
+        <input type="checkbox" id="item4" value="2099" />
+        <label for="item4">Kirby: Air Ride  ($17.99)</label>
+        <input type="checkbox" id="item5" value="1999" />
+        <label for="item5">Legend of Zelda: WindWaker  ($20.99)</label>
+        <input type="button" value="Calculate" id="sButton" />
+    </form>
+    <table>
+        <colgroup>
+            <col class="label" />
+            <col class="amount" />
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>Item total</td>
+            <td>0.00</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>0.00</td>
+        </tr>
+        <tr>
+            <td>Total with tax</td>
+            <td>$0.00</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    </article>
+<script>
+    function calcTotal() {
+        let itemTotal = 0;
+        let tax = 0;
+        let totalWithTax = 0;
+        let items = document.getElementsByTagName("input");
+        let cells = document.getElementsByTagName("td");
+        for (let i = 0; i < 5; i++) {
+            if (items[i].checked) {
+                itemTotal += (items[i].value * 1);
+            }
+        }
+        tax = itemTotal * 0.05;
+        totalWithTax = itemTotal + tax;
+        cells[1].innerHTML = (itemTotal / 100).toFixed(2);
+        cells[3].innerHTML = (tax / 100).toFixed(2);
+        cells[5].innerHTML = "$" + (totalWithTax / 100).toFixed(2);
+
+    }
+
+    let submitButton = document.getElementById("sButton");
+    if (submitButton.addEventListener) {
+        submitButton.addEventListener("click", calcTotal, false);
+    }
+    else if (submitButton.attachEvent) {
+        submitButton.attachEvent("onclick", calcTotal);
+    }
+</script>
+</body>
+</html>

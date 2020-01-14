@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+<h1>Timeless Games</h1>
+<nav>
+    <a id = nav1 href="Home.html">Home</a>
+    <a id = nav2 href="GameCalculator.html">Games Avaliable</a>
+    <a id = nav3 href="Contact.html">Contact Inforamtion</a>
+    <a id = nav4 href="Shop.html">Shop</a>
+</nav>
+<article>
+    <h2>Contact Me</h2>
+    <p>Here (for the time being) you will email me the game you want and we shall exchange information that way</p>
+    <p>Shopping Cart will avaliable in the Summer. Please be patient</p>
+    <form id="contact">
+        <fieldset id="contactinfo">
+            <label for="nameinput">
+                Name
+                <input type="text" id="nameinput" name="name" />
+            </label>
+            <label for="emailinput">
+                Email
+                <input type="text" id="emailinput" name="email" />
+            </label>
+        </fieldset>
+        <fieldset id="whichgame">
+            Choose the game you want:
+            <select id="game" name="game">
+            <option value="01">Spyro Enter the Dragonfly</option>
+            <option value="02">Super Mario Sunshine</option>
+            <option value="03">WarioWare INC</option>
+            <option value="04">Kirby Air Ride</option>
+            <option value="05">The Legend of Zelda: The Wind Waker</option>
+        </select></fieldset>
+        <fieldset id="submitbutton">
+            <input type="button" id="submit" value="Submit" />
+        </fieldset>
+    </form>
+
+<script>
+    function submitInfo() {
+        var name = document.getElementById("nameinput");
+        var email = document.getElementById("emailinput");
+        var choice = document.getElementById("game");
+        (name.value && email.value && choice.value) ?
+            alert("Thank You!") : alert ("Please fill in all fields");
+    }
+    document.getElementById("submit").addEventListener("click", submitInfo, false);
+</script>
+    <p>Address Info</p>
+    <form id="address">
+        <fieldset id="zipset">
+            <label for="zip" id="ziplabel">Postal Code</label>
+            <input id="zip" type="number" />
+        </fieldset>
+
+        <fieldset id="csset">
+            <label for="city" id="citylabel">City</label>
+            <input id="city" type="text" />
+            <label for="state" id="statelabel">State</label>
+            <input id="state" type="text" />
+        </fieldset>
+        <fieldset id="countryset">
+            <label for="germany" id="germanylabel">Germany</label>
+            <input id="germany" type="radio" value="germany" name="country" />
+            <label for="us" id="uslabel">United States</label>
+            <input id="us" type="radio" value="us" name="country" />
+        </fieldset>
+    </form>
+<script src="script.js"></script>
+
+
+<p>Suggestion for the Site? You can give me a list here I'll get back to you at the earliest conveince</p>
+    <div id="results">
+        <ul>
+            <li id="item1"></li>
+            <li id="item2"></li>
+            <li id="item3"></li>
+            <li id="item4"></li>
+            <li id="item5"></li>
+        </ul>
+        <p id="resultsExpl"></p>
+    </div>
+    <form id="suggestions">
+        <fieldset>
+            <label for="suggest" id="placeLabel">
+                Type in a suggestion, then click Submit:
+            </label>
+            <input type="text" id="suggest" />
+        </fieldset>
+        <fieldset>
+            <button type="button" id="button">Submit</button>
+        </fieldset>
+    </form>
+</article>
+<script>
+
+    let i = 1;
+    let listItem = "";
+    function processInput() {
+        switch (i) {
+            case (5) :
+                listItem = "item" + i;
+                document.getElementById(listItem).innerHTML = document.getElementById("suggest").value;
+                document.getElementById("suggest").value = "";
+                document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions :)";
+                i++;
+                break;
+            default:
+                listItem = "item" + i;
+                document.getElementById(listItem).innerHTML = document.getElementById("suggest").value;
+                document.getElementById("suggest").value = "";
+                i++;
+                break;
+        }
+
+    }
+    let btn = document.getElementById("button");
+
+    btn.addEventListener("click", processInput);
+
+
+</script>
+
+</body>
+</html>
