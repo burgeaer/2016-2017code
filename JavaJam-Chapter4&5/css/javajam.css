@@ -1,0 +1,85 @@
+/* Css - Aeryn - JavaJam */
+
+
+header {
+	background-color: #D2B48C;
+}
+body {
+	background-color: #FCEBB6;
+	color: #221811;
+	font-family: verdana, sans-serif;
+	padding: 20px;
+	margin: 5px;
+	
+}
+h1 {
+	color: #221811;
+	line-height: 200%;
+	font-style: bold;
+	font-family: Arial, san-serif;
+	text-align: left;
+	font-size: 50px;
+	margin-left: 250px;
+	margin-top: -125px;
+}
+h2 {
+	font-weight:: bold;
+	color: #221811;
+	font-family: Arial, sans-serif;
+	font-size: 35px;
+}
+nav {
+	text-align: center;
+}
+nav  a{
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+ul {
+	color: #221811;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+
+}
+#picture{
+	float: right;
+}
+#menupic {
+	margin-top: 20px;
+	float: right;
+}
+#artist1 {
+}
+.back {
+	background-color: #D2B48C;
+}
+
+.head1 {
+	font-weight: bold;
+}
+
+footer {
+	background-color: #D2B48C;
+	text-align: center;
+}
+footer p {
+	font-style: italic;
+	color: #221811;
+}
+footer a {
+	font-style: italic
+}
+#wrapper {
+	background-color: #FEF6C2;
+	min-width: 900px;
+	max-width: 1280px;
+	box-shadow: 5px 5px 5px 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width:80%;
+	height: 1000px;
+	
+	
+}
