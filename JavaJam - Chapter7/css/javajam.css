@@ -1,0 +1,201 @@
+/* Css - Aeryn - JavaJam */
+
+* {
+	box-sizing: border-box;
+}
+
+
+header {
+	background-color: #D2B48C;
+	display: block;
+}
+main {
+	
+}
+body {
+	background-color: #FCEBB6;
+	color: #221811;
+	font-family: verdana, sans-serif;
+	padding: 20px;
+	margin: 5px;
+	padding-left: 3em;
+	padding-right: 2em;
+	display: block;
+	
+}
+h1 {
+	color: #221811;
+	line-height: 200%;
+	font-style: bold;
+	font-family: Arial, san-serif;
+	text-align: left;
+	font-size: 50px;
+	margin-left: 250px;
+	margin-top: -125px;
+	padding-left: 3em;
+	padding-right: 2em;
+}
+h2 {
+	font-weight:: bold;
+	color: #221811;
+	font-family: Arial, sans-serif;
+	font-size: 35px;
+	padding-left: 3em;
+	padding-right: 2em;
+}
+nav {
+	float: left;
+	width: 200px;
+	height: 870px;
+	display: block;
+	background-color:#231814;
+	
+}
+nav  a{
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+nav a:link{ 
+	color: #FEF6C2;
+}	
+nav a:visited {
+	color: #D2B48C;
+}
+nav a:hover {
+	color: #CC9933;
+}
+nav ul {
+	padding-left: 0px;
+	list-style-type: none;
+}
+nav ul li {
+	padding: 10px;
+	margin-left: 50px;
+	list-style-type: none;
+}
+ul {
+	color: #221811;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	padding-left: 3em;
+	padding-right: 2em;
+
+}
+p {
+	padding-left: 3em;
+	padding-right: 2em;
+}
+#picture{
+	background-image: url(images/heroroad.jpg);
+	background-size: 200%;
+	background-color: #FEF6C2;
+	height: 250px;
+	padding: 0px;
+	margin-left:250px;
+}
+#menupic {
+	background-image: url(images/heromugs.jpg);
+	background-size: 200%;
+	background-color: #FEF6C2;
+	height: 250px;
+	padding: 0px;
+	margin-left:250px;
+}
+#guitar {
+	background-image: url(images/heroguitar.jpg);
+	background-size: 200%;
+	background-color: #FEF6C2;
+	height: 250px;
+	padding: 0px;
+	margin-left:250px;
+}
+#mobile {
+	display: none;
+}
+#desktop {
+	display: inline;
+}
+.back {
+	background-color: #D2B48C;
+	text-transform: uppercase;
+	
+}
+
+.head1 {
+	font-weight: bold;
+}
+.details {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+.pad {
+	padding-left:10px;
+	padding-right: 10px;
+}
+.floatleft {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.down {
+	margin-top: 200px;
+}
+.down1 {
+	margin-top: 340px;
+}
+footer {
+	background-color: #D2B48C;
+	text-align: center;
+}
+footer p {
+	font-style: italic;
+	color: #221811;
+}
+footer a {
+	font-style: italic
+}
+#wrapper {
+	background-color: #FCEBB6;
+	min-width: 900px;
+	max-width: 1280px;
+	box-shadow: 10px 10px 10px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1090px;
+}
+@media only screen and (max-width: 1024px) {
+	body {margin: 0px;
+	background-image: none;}
+	#wrapper {min-width: 0px; margin: 0px; padding: 0px; box-shadow: none;}
+	header { border-bottom: 5px solid, #FEF6C2;}
+	h1 {margin-top: 0px; margin-bottom: 1em; padding-top: 1em; padding-bottom: 1em; 
+	font-size: 1.3em;}
+	nav { float: none; width: auto; padding-top: 0px; margin: 10px; font-size: 1em;}
+	nav li {display: inline-block;}
+	nav a {padding: 1em; width: 8em; font-weight: bold; border-style: none;}
+	nav ul {padding: 0px; margin: 0px;}
+	#picture {margin: 0px; padding: 0px;}
+	#menupic {margin: 0px; padding: 0px;}
+	#guitar {margin: 0px; padding: 0px;}
+	main { padding: 0px; margin: 0px; font-size: 90%;}
+}
+@media only screen and (max-width: 768px){
+	body {margin: 0px;
+	background-image: none;}
+	#wrapper {min-width: 0px; margin: 0px; padding: 0px; box-shadow: none;}
+	header { border-bottom: 5px solid, #FEF6C2; height: 128px;}
+	h1 { margin-top: 0px; margin-bottom: 1em; padding-top: 1em; padding-bottom: 1em; 
+	font-size: 1.3em; padding-left: 0px; font-size: 2em;}
+	nav { float: none; width: auto; padding-top: 0px; margin: 10px; font-size: 1em;margin: 0px;}
+	nav li {display: block;}
+	nav a {padding: 1em; width: 8em; font-weight: bold; border-style: none; display: block;}
+	nav ul {padding: 0px; margin: 0px;}
+	h2{padding-top: 0.5em; padding-right: 0px; padding-bottom: 0px; padding-left: 0.5em; margin-right: 0.5em;}
+	.details {padding-right: 0px;}
+	#picture {margin: 0px; padding: 0px;}
+	#menupic {margin: 0px; padding: 0px;}
+	#guitar {margin: 0px; padding: 0px;}
+	.floatleft{padding-right: 0.5em;}
+	main { padding: 0px; margin: 0px; font-size: 90%;}
+}

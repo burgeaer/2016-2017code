@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Where to purchase games</title>
+		
+		<link rel="stylesheet" href="../css/stylessm.css"/>
+        <script src="scripts/modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+	<h1></h1>
+	<header>
+
+	</header>
+	<nav>
+		<a id="nav1" href="index.html">HOME</a>
+		<a id="nav2" href="about.html">ABOUT THE GAME</a>
+		<a id="nav3" href="timeline.html">TIMELINE</a>
+		<a id="nav4" href="creator.html">ABOUT THE CREATOR</a>
+		<a id="nav5" href="games.html">WHERE TO PURCHASE GAMES</a>
+	</nav>
+		<section id="g">
+		<h3>Go out and Buy these Games NOW!</h3>
+			<article id="games">
+                <p id="motion">Click on the Game you Want, and it will take you to a site you can buy it</p>
+                <p>If you want multiple games you can also use the calculator below to get an estimate of what it would cost.</p>
+
+                <figure id="link">
+                <a href="http://www.amazon.com/Super-Smash-Bros-nintendo-64/dp/B00000J2W7/ref=sr_1_1?ie=UTF8&qid=1460481836&sr=8-1&keywords=Super+Smash+Bros+64"><img src="../images/smash64.jpg" width="200"></a>
+                <a href="http://www.amazon.com/Super-Smash-Bros-Melee-GameCube/dp/B00005Q8M0/ref=sr_1_1?ie=UTF8&qid=1460482407&sr=8-1&keywords=Super+Smash+brothers+melee"><img src="../images/smashmelee.jpg" width="200"></a>
+                <a href="http://www.amazon.com/Super-Smash-Bros-Brawl-Nintendo-Wii/dp/B000FQ9R4E/ref=sr_1_1?ie=UTF8&qid=1460482708&sr=8-1&keywords=Super+Smash+brothers+brawl"><img src="../images/smashbrawl.jpg" width="200"></a>
+                <a href="https://www.amazon.com/Super-Smash-Bros-Nintendo-Wii-U/dp/B00DD0B0BM?th=1"><img src="../images/supersmashwii.jpg" width="200"></a>
+                    <a href="https://www.amazon.com/Super-Smash-Bros-Nintendo-Switch/dp/B01N5OKGLH"><img src="../images/2018.jpg" width="200"></a>
+
+                </figure>
+
+                <article>
+                    <h4>Calculator (Estimated) </h4>
+
+                    <form id="new">
+
+                        <input type="checkbox" id="item1" value="4499" />
+
+                        <label for="item1">Super Smash Brothers for 64 ($44.99)</label>
+
+                        <input type="checkbox" id="item2" value="17999" />
+                        <label for="item2">Super Smash Brothers Melee ($179.99)</label>
+
+                        <input type="checkbox" id="item3" value="3899" />
+                        <label for="item3">Super Smash Brothers Brawl ($38.99)</label>
+
+                        <input type="checkbox" id="item4" value="4299" />
+                        <label for="item4">Super Smash Brothers (Wii U) ($42.99)</label>
+
+                        <input type="checkbox" id="item5" value="5999" />
+                        <label for="item5">Super Smash Brothers (NS)(Pre-Order)($59.99)</label>
+                        <input type="button" value="Submit" id="sButton" />
+                    </form>
+                    <table>
+                        <colgroup>
+                            <col class="label" />
+                            <col class="amount" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>Item total</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total with tax</td>
+                            <td>$0.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <script>
+                    function calcTotal() {
+                        let itemTotal = 0;
+                        let tax = 0;
+                        let totalWithTax = 0;
+                        let items = document.getElementsByTagName("input");
+                        let cells = document.getElementsByTagName("td");
+                        for (let i = 0; i < 5; i++) {
+                            if (items[i].checked) {
+                                itemTotal += (items[i].value * 1);
+                            }
+                        }
+                        tax = itemTotal * 0.05;
+                        totalWithTax = itemTotal + tax;
+                        cells[1].innerHTML = (itemTotal / 100).toFixed(2);
+                        cells[3].innerHTML = (tax / 100).toFixed(2);
+                        cells[5].innerHTML = "$" + (totalWithTax / 100).toFixed(2);
+
+                    }
+
+                    let submitButton = document.getElementById("sButton");
+                    if (submitButton.addEventListener) {
+                        submitButton.addEventListener("click", calcTotal, false);
+                    }
+                    else if (submitButton.attachEvent) {
+                        submitButton.attachEvent("onclick", calcTotal);
+                    }
+
+
+                </script>
+			
+			</article>
+		</section>
+		<footer>
+			<span><a href="index.html">Home</a></span> | <span><a href="about.html">About The Game</a></span> | <span><a href="timeline.html">Timeline</a></span> | <span><a href="creator.html">About The Creator</a></span> | <span><a href="games.html">Where to Purchase Games</a></span>
+			<address>
+			&copy; 2016 Super Smash Brothers: The History 
+			www.smashbrohistory.com
+			</address>
+		</footer>
+	</body>
+</html>
