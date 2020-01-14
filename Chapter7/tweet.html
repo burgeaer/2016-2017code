@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets</title>
+</head>
+
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+<body>
+<script src="scripts/tweet.js"></script>
+
+
+<canvas id="tweet" width="600" height="200"></canvas>
+<!--<canvas id="smiley" width="800" height="600"></canvas> -->
+<form>
+    <p>
+        <label for="backgroundColor">Select background color:</label>
+        <select id="backgroundColor">
+            <option value="white" selected="selected">White</option>
+            <option value="black">Black</option>
+        </select>
+    </p>
+    <p>
+        <label for="Shape">Select Shape:</label>
+        <select id="Shape">
+            <option value="none" selected="selected">Neither</option>
+            <option value="squares">Squares</option>
+            <option value="circles">Circles</option>
+        </select>
+    </p>
+    <p>
+        <label for="foregroundColor">Select background color:</label>
+        <select id="foregroundColor">
+            <option value="black" selected="selected">Black</option>
+            <option value="white">White</option>
+        </select>
+    </p>
+    <p>
+        <label for="tweets">Pick a Tweet</label>
+        <select id="tweets">
+        </select>
+    </p>
+    <p>
+        <input type="button" id="previewButton" value="Preview">
+    </p>
+</form>
+<script src="http://tweetshirt.wickedlysmart.com/?callback=updateTweets"></script>
+</html>
